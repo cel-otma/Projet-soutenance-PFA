@@ -1,0 +1,25 @@
+{
+  "name": "hypertube",
+  "version": "1.0.0",
+  "description": "Ce projet vous propose de créer une application web permettant à un utilisateur de rechercher et visionner des vidéos. Le lecteur sera directement intégré au site, et les vidéos seront téléchargées au travers du protocole BitTorrent",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npm install --prefix ./server && npm install --prefix ./client",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "npm run --prefix ./client Product",
+    "server": "npm run --prefix ./server start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ael-imra/HyperTube.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ael-imra/HyperTube/issues"
+  },
+  "homepage": "https://github.com/ael-imra/HyperTube#readme",
+  "dependencies": {
+    "concurrently": "^8.2.1"
+  }
+}
